@@ -6,19 +6,20 @@
   E-commerce is the buying and selling of goods and services using the internet and the transfer of money to execute these transactions. Create a back end e-commerce site that utilizes Express.js API to use Sequalize and interact with MySQL database. Creating  
 
   ## Table of Contents
-  * [Installation](#installation)
-  * [Task](#task)
-  * [Screenshots](#screenshots)
-  * [Video](#video)
-  * [Usage](#usage)
-  * [License](#license)
-  * [Questions](#questions)
+  1. [Installation](#installation)
+  2. [Task](#task)
+  3. [Usage](#usage)
+  4. [Video](#video)
+  5. [Screenshots](#screenshots)
+  6. [License](#license)
+  7. [Questions](#questions)
 
   ## Installation
   Please install the following dependencies in the terminal to run the application. 
   * [MySQL2](https://www.npmjs.com/package/mysql2)
   * [Sequelize](https://www.npmjs.com/package/sequelize)
   * [dotenv](https://www.npmjs.com/package/dotenv)
+  * [express](https://www.npmjs.com/package/express)
 
   ## Task
   In order to use this application, the following requirements are met when:
@@ -35,17 +36,22 @@
   WHEN I test API POST, PUT, and DELETE routes in Insomnia
   THEN I am able to successfully create, update, and delete data in my database
   ```
-
-  ## Screenshots
-  ![]()
-  ![]()
-  ![]()
+  ## Usage
+  Follow the steps below to begin the application:
+  1. `mysql -u root -p`
+  2. type in your mysql password
+  3. `source db/schema.sql`
+  4. `quit`
+  5. `npm run seed`
+  6. `npm start`
 
   ## Video
 
-  [](./.mp4)
+  [Click to deploy video](./public/assets/images/walkthrough.mp4)
 
-  ## Usage
+  ## Screenshots
+  ![seeded database](./public/assets/images/seeds.jpg)
+  ![insomnia routes](./public/assets/images/e-commerce-orm.jpg)
 
   ## License
   This project is covered under MIT.

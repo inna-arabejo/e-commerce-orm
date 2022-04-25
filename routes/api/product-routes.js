@@ -1,11 +1,12 @@
 const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
+const { findAll } = require('../../models/Product');
 
 
 router.get('/', async (req, res) => {
   try {
     const products = await Product.findAll({
-      include: [{model: Category}, {model: ProductTag}],
+      include: [{ model: Category }, { model: ProductTag }],
     })
     res.status(200).json(products);
   } catch (err) {
@@ -16,7 +17,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const products = await Product.findByPk(req.params.id, {
-      include: [{model: Category}, {model: ProductTag}],
+      include: [{ model: Category }, {model: ProductTag }],
     })
     if (!products) {
       res.status(404).json({ message: 'No product found with that id'})
@@ -91,7 +92,7 @@ router.delete('/:id', async (req, res) => {
     })
     await productData.destroy();
     if (!productData) {
-      res.status(404).json({ message: 'No product found with that id'})
+      res.status(400).json({ message: 'No product found with that id'})
       return
     }
     res.status(200).json(productData)
