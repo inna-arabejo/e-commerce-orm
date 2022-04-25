@@ -47,7 +47,7 @@
 
   ## Video
 
-  [Click to deploy video](./public/assets/images/walkthrough.mp4)
+  [Click to deploy video](https://youtu.be/kWcLg4JHjhE)
 
   ## Screenshots
   ![seeded database](./public/assets/images/seeds.jpg)
