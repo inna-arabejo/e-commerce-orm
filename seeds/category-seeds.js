@@ -14,6 +14,12 @@ const categoryData = [
     category_name: 'Hats',
   },
   {
+    category_name: 'Sunglasses',
+  },
+  {
+    category_name: 'Backpack',
+  },
+  {
     category_name: 'Shoes',
   },
 ];
